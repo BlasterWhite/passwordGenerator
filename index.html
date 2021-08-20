@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- shity password generator by BlasterWhite -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassWord Generator</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <!-- Scripts -->
+</head>
+<body>
+    <div id="container">
+        <h1>PassWord Generator</h1>
+        <table>
+            <tr>
+                <td><label>Numbers (0, 1, ...)</label></td>
+                <td><input type="checkbox" name="number" id="num" onclick="numberIN()" checked></td>
+            </tr>
+            <tr>
+                <td><label>Letters (a, b, ...)</label></td>
+                <td><input type="checkbox" name="letter" id="letter" onclick="letterIN()" checked></td>            
+            </tr>
+            <tr>
+                <td><label>Maj Letters (A, B, ...)</label></td>
+                <td><input type="checkbox" name="letterMaj" id="letterMaj" onclick="letterMajIN()" checked></td>
+            </tr>
+            <tr>
+                <td><label>Specials Character (:, @, ...)</label></td>
+                <td><input type="checkbox" name="special" id="special" onclick="specialIN()"></td>
+            </tr>
+            <tr>
+                <td><label>Specials Character (", \, ...)</label></td>
+                <td><input type="checkbox" name="danger" id="danger" onclick="dangerIN()"></td>
+            </tr>
+        </table>
+        <hr style="border: 1px solid #bdbdbd;border-radius: 4px;width: 60%;"/>
+        <label>Lenght of the PassWord</label>
+        <input type="range" name="size" id="size" value="12"  min="1" max="50">
+        <input type="number"id="sizenum" value="12" min="1" max="50" style="-moz-appearance: textfield;-webkit-appearance: textfield; width: 20px;">
+        <div id="result">
+
+        </div>
+        <button id="copy" onclick="copy()">Copy the PassWord</button>
+        <p id="confirm" class="hidden" style="margin: 5px 0 0 0;">Copied !</p>
+    </div>
+</body>
+</html>
+<script src="app.js"></script>
